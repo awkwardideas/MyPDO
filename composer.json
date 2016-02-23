@@ -1,6 +1,7 @@
 {
     "name": "awkwardideas/mypdo",
     "description": "Simple PDO Connector format for MySQL",
+	"license": "MIT",
     "authors": [
         {
             "name": "Chad Haney",
@@ -12,7 +13,8 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.6.4",
+        "illuminate/support": "4.0.x",
     },
     "autoload": {
         "psr-4": {

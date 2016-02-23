@@ -1,8 +1,5 @@
 <?php namespace AwkwardIdeas\MyPDO;
 
-use Illuminate\Contracts\Auth\Access\Gate as GateContract;
-use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
 class MyPDOServiceProvider extends ServiceProvider
