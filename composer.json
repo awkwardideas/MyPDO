@@ -2,22 +2,22 @@
     "name": "awkwardideas/mypdo",
     "description": "",
     "authors": [
-    {
-        "name": "Chad Haney",
-        "email": "chad@awkwardideas.com"
-    },
-    {
-        "name": "Awkward Ideas",
-        "email": "support@awkwardideas.com"
-    }
-],
+        {
+            "name": "Chad Haney",
+            "email": "chad@awkwardideas.com"
+        },
+        {
+            "name": "Awkward Ideas",
+            "email": "support@awkwardideas.com"
+        }
+    ],
     "require": {
-    "php": ">=5.4.0"
-},
+        "php": ">=5.4.0"
+    },
     "autoload": {
-    "psr-4": {
-        "AwkwardIdeas\\MyPDO\\": "src/"
-    }
-},
+        "psr-4": {
+            "AwkwardIdeas\\MyPDO\\": "src/"
+        }
+    },
     "minimum-stability": "dev"
 }
