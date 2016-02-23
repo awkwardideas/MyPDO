@@ -2,6 +2,7 @@
 
 use AwkwardIdeas\MyPDO\DBConnection;
 use AwkwardIdeas\MyPDO\SQLParameter;
+use \PDO;
 
 class MyPDO{
     private static $dbConnection;
@@ -76,13 +77,15 @@ class MyPDO{
         }
     }
 
-    public function Execute($sqlCommand, $sqlParameters){
+    public function Execute($sqlCommand, $sqlParameters = null){
         try {
             $readWrite = self::$dbConnection->readWrite;
             $readWrite->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sqlQuery = $readWrite->prepare($sqlCommand);
-            foreach ($sqlParameters as $sqlParameter) {
-                $sqlQuery->bindParam($sqlParameter->parameter, $sqlParameter->value, $sqlParameter->dataType);
+            if ($sqlParameters != null) {
+                foreach ($sqlParameters as $sqlParameter) {
+                    $sqlQuery->bindParam($sqlParameter->parameter, $sqlParameter->value, $sqlParameter->dataType);
+                }
             }
             $sqlQuery->execute();
             return true;
@@ -92,13 +95,15 @@ class MyPDO{
         }
     }
 
-    function ExecuteGetIdentity($sqlCommand, $sqlParameters){
+    function ExecuteGetIdentity($sqlCommand, $sqlParameters = null){
         try {
             $readWrite = self::$dbConnection->readWrite;
             $readWrite->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sqlQuery = $readWrite->prepare($sqlCommand);
-            foreach ($sqlParameters as $sqlParameter) {
-                $sqlQuery->bindParam($sqlParameter->parameter, $sqlParameter->value, $sqlParameter->dataType);
+            if ($sqlParameters != null) {
+                foreach ($sqlParameters as $sqlParameter) {
+                    $sqlQuery->bindParam($sqlParameter->parameter, $sqlParameter->value, $sqlParameter->dataType);
+                }
             }
             $sqlQuery->execute();
         } catch (PDOException $e) {
