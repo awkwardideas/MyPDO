@@ -1,6 +1,6 @@
 {
     "name": "awkwardideas/mypdo",
-    "description": "",
+    "description": "Simple PDO Connector format for MySQL",
     "authors": [
         {
             "name": "Chad Haney",

@@ -13,7 +13,5 @@ class MyPDOServiceProvider extends ServiceProvider
         require_once __DIR__ . '/DBConnection.php';
         require_once __DIR__ . '/SQLParameter.php';
         require_once __DIR__ . '/MyPDO.php';
-
-        $this->app->register(MyPDOServiceProvider::class);
     }
 }
