@@ -8,6 +8,10 @@ class MyPDO{
     private static $dbConnection;
     const DB_ErrorMessage = "Your request was not able to be completed due to a system error has occured";
 
+    public function TestConnection(){
+        return "success";
+    }
+
     public function EstablishConnections($host, $dbname, $rUser, $rPwd, $rwUser, $rwPwd){
         try {
             //Establish Read Only Connection

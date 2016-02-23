@@ -1,5 +1,5 @@
 <?php namespace AwkwardIdeas\MyPDO;
-
+use \PDO;
 class SQLParameter{
     public $parameter;
     public $value;
